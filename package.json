@@ -1,0 +1,44 @@
+{
+  "name": "mol-layout",
+  "version": "0.1.0",
+  "author": "flkt.crnpio@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flkt-crnpio/mol-layout"
+  },
+  "main": "mol/layout.min.css",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "sass": "^1.97.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "bugs": {
+    "url": "https://github.com/flkt-crnpio/mol-layout/issues"
+  },
+  "description": "layout (grid and space) file customizable by css vars",
+  "files": [
+    "mol",
+    "README.md"
+  ],
+  "homepage": "https://flkt-crnpio.github.io/mol-layout/",
+  "keywords": [
+    "mol-layout",
+    "layout",
+    "grid",
+    "css",
+    "scss",
+    "sass",
+    "bun",
+    "flkt"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "bun run vars & bun run layout & bun run serve",
+    "serve": "bun --watch run docs/index.html",
+    "layout": "sass --watch scss/layout.scss:docs/layout.css --style expanded",
+    "vars": "sass --watch scss/_vars.scss:docs/vars.css --style expanded",
+    "build": "sass scss/layout.scss:mol/layout.min.css --style compressed"
+  }
+}
