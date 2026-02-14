@@ -35,10 +35,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "dev": "bun run vars & bun run layout & bun run serve",
+    "dev": "bun run layout & bun run serve",
     "serve": "bun --watch run docs/index.html",
     "layout": "sass --watch scss/layout.scss:docs/layout.css --style expanded",
-    "vars": "sass --watch scss/_vars.scss:docs/vars.css --style expanded",
     "build": "sass scss/layout.scss:mol/layout.min.css --style compressed"
   }
 }
